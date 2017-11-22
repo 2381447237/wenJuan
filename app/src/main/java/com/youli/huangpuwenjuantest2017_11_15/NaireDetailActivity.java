@@ -581,7 +581,8 @@ public class NaireDetailActivity extends Activity implements View.OnClickListene
         if(info.isINPUT()){
             qRightll.setVisibility(View.VISIBLE);
             EditText et=new EditText(this);//问题的输入框
-            et.setTextSize(15);
+           // et.setTextSize(15);
+            et.setGravity(Gravity.CENTER);
             if(isAll.equals("all")){
                 et.setEnabled(false);
             }
