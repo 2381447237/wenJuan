@@ -307,13 +307,6 @@ public class NaireDetailActivity extends Activity implements View.OnClickListene
     //下一题
     private void nextQuestion(){
 
-
-        if (index >= questionTitleList.size() - 1) {
-            Toast.makeText(this, "已经是最后一题了", Toast.LENGTH_SHORT).show();
-            btnAll.setVisibility(View.VISIBLE);
-            return;
-        }
-
         NaireListInfo.DetilsBean info=questionTitleList.get(index);
 
         List<NaireListInfo.DetilsBean> tempSmallWenJuan = getAnswerByParentId(info);
@@ -353,6 +346,12 @@ public class NaireDetailActivity extends Activity implements View.OnClickListene
             return;
         if (makeEdit_checkBox(answerInfo))
             return;
+
+        if (index >= questionTitleList.size() - 1) {
+            Toast.makeText(this, "已经是最后一题了", Toast.LENGTH_SHORT).show();
+            btnAll.setVisibility(View.VISIBLE);
+            return;
+        }
 
         List<NaireListInfo.DetilsBean> tempAnswer = new ArrayList<>();
 

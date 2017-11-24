@@ -48,7 +48,7 @@ public class MainActivity extends Activity {
     private void getLocalData(){
 
         try {
-            InputStream is=getAssets().open("myjson.txt");
+            InputStream is=getAssets().open("myjson2.txt");
             final String text=readTextFromSDcard(is);
 
             runOnUiThread(new Runnable() {
